@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styles from "./Products.module.scss";
 
-const baseURL = import.meta.env.VITE_BASE_URL;
+const baseURL = "https://headphones-server.onrender.com";
 
 const Product = () => {
   const { productId } = useParams();

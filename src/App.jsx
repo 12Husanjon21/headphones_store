@@ -14,7 +14,7 @@ import { FaCartShopping } from "react-icons/fa6";
 function App() {
   const [cart, setCart] = useState([]);
   const [add, setAdd] = useState(0);
-  const baseURL = import.meta.env.VITE_BASE_URL;
+  const baseURL = "https://headphones-server.onrender.com";
 
   useEffect(() => {
     async function fetchData() {
