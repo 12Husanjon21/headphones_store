@@ -14,12 +14,12 @@ import { FaCartShopping } from "react-icons/fa6";
 function App() {
   const [cart, setCart] = useState([]);
   const [add, setAdd] = useState(0);
-  const baseURL = "https://headphones-server.onrender.com/products";
+  const baseURL = import.meta.env.VITE_BASE_URL;
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch(baseURL);
+        const response = await fetch(`${baseURL}/products`);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
