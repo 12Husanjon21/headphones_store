@@ -4,7 +4,7 @@ import styles from "./home.module.scss";
 const Home = ({ cart }) => {
   return (
     <div className={styles["home-container"]}>
-      <h3>Your Products:</h3>
+      <h3>My Products:</h3>
       <ul className={styles["product-list"]}>
         {cart.map((item, index) => (
           <li key={index} className={styles["product-item"]}>

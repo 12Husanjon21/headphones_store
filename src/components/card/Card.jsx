@@ -19,7 +19,7 @@ const Card = ({ product, setCart, setAdd }) => {
     <div>
       <img src={product.image_url} alt={product.product_name} />
       <h4>
-        <Link to={`/products/${product.id}`}>{product.name}</Link>
+        <Link to={`/products/${product.id}`} className={styles.navigate_link}>{product.name}</Link>
       </h4>
       <p>{product.description}</p>
 
