@@ -4,7 +4,7 @@ import Card from "../card/Card";
 import { useDispatch, useSelector } from "react-redux";
 import { addProducts } from "../../store/productsSlice";
 
-const baseURL = import.meta.env.VITE_BASE_URL;
+const baseURL = "https://headphones-server.onrender.com";
 
 const Products = ({ cart, setCart, setAdd }) => {
   const products = useSelector((store) => store.productsReducer.products);
@@ -58,7 +58,7 @@ const Products = ({ cart, setCart, setAdd }) => {
         const data = await response.json();
         dispatch(addProducts(data));
       } catch (error) {
-        console.error(error);
+        console.error(error.message);
       } finally {
         setLoading(false);
       }
