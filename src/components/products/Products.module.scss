@@ -1,0 +1,94 @@
+.container {
+    display: grid;
+    grid-template-columns: 270px 1fr;
+
+    aside,
+    main {
+        padding: 1rem;
+    }
+
+    aside {
+        background-color: rgb(255, 255, 255);
+        max-width: 220px;
+    }
+
+    ul {
+        margin-bottom: 4rem;
+        margin-left: 1.8em;
+        li {
+            margin-bottom: 0.5em;
+            transition: transform 0.5s;
+
+            &:hover {
+                transform: scale(1.09);
+            }
+        }
+
+        label {
+            margin-left: 0.8em;
+            color: grey;
+            cursor: pointer;
+            transition: color 0.1s;
+
+            &:hover {
+                color: darken(rgb(0, 0, 0), 20%);
+            }
+        }
+    }
+
+    h3 {
+        margin-bottom: 0.4em;
+    }
+
+    h1 {
+        margin-bottom: 0.6em;
+
+    }
+
+    .colorsContainer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.3rem;
+
+        .color {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 15%;
+            border: 1px solid;
+            cursor: pointer;
+            outline-offset: 0.1em;
+            transition: transform 0.3s, border-color 0.1s;
+
+            &:hover {
+                transform: scale(1.2);
+                border-color: darken(rgb(238, 238, 238), 20%);
+            }
+
+            &:focus {
+                outline: 2px solid ;
+            }
+        }
+    }
+
+    input[type="radio"] {
+        filter:grayscale(100%);
+        -webkit-filter: hue-rotate(270deg);
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 3rem;
+
+        &>* {
+            border: 1px solid #e9e9e9;
+            padding: 1.5rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+}
